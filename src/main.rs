@@ -1,7 +1,10 @@
+use text_io::read;
+
 fn main() {
-    let input = "";
-    let translation = translate(input);
-    let de_translation = de_translate(input);
+    println!("Enter text to translate:");
+    let input: String = read!();
+    let translation = translate(&input);
+    let de_translation = de_translate(&input);
     println!("Original string: '{}'\nTranslation: '{}'\nDetranslation: '{}'",input, translation, de_translation);
 }
 fn translate(input: &str) -> String{
